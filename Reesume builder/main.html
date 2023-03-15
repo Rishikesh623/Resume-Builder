@@ -1,0 +1,173 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Resume Generator</title>
+  </head>
+    <body >
+        <div class="card mx-5 mt-3" id="Resume-form">
+            <div class="card-header">
+            <h1 class="text-center my-2">Resume Generator</h1>
+            <p class="text-center">By Team NEWBIE</p>
+            </div>
+            <div class="card-body">
+            <div class="container" >
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <h3>PERSONAL INFORMATION</h3>
+                    
+                    <div class="form-group">
+                        <label for="namefield">Name </label>
+                        <input type="text" id="namefield" placeholder="Enter here" class="form-control"/>
+                    </div>
+
+                    <p class="text-secondary mt-3">Contact Details</p>
+                    <div class="form-group">
+                        <label for="contactfield">Phone no. </label>
+                        <input type="text" id="contactfield" placeholder="Enter here" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailfield">Email id </label>
+                        <input type="text" id="emailfield" placeholder="Enter here" class="form-control"/>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="add_field">Address</label>
+                        <textarea type="text" id="add_field" placeholder="Enter here" class="form-control" ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="add_field">Upload your Profile photo</label>
+                        <input id="imgfield" type="file" class="form-control"/>
+                    </div>
+
+                    <p class="text-secondary mt-3">Important links</p>
+                    
+                    <div class="form-group mt-2">
+                        <label for="fbfield">Facebook </label>
+                        <input type="text" id="fbfield" placeholder="Enter here" class="form-control"/>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="Instafield">Instagram </label>
+                        <input type="text" id="Instafield" placeholder="Enter here" class="form-control"/>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="L_field">Linkdin </label>
+                        <input type="text" id="L_field" placeholder="Enter here" class="form-control" />
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h3>PROFESSIONAL INFORMATION</h3>
+
+                    <div class="form-group "  >
+                        <label for="">Objective </label>
+                        <textarea id="objfield" placeholder="Enter here" class="form-control" ></textarea>
+                    </div>
+
+                    <div class="form-group " id="wexp">
+                        <label for="">Work Experience </label>
+                        <textarea placeholder="Enter here" class="form-control wfield" rows="2"></textarea>
+                        <div class="container text-center mt-3" id="wAddbutton">
+                            <button onclick="addnew_wfield()"  class="btn btn-primary btn-sm">ADD</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group " id="aq" >
+                        <label for="">Academic Qualification </label>
+                        <textarea  placeholder="Enter here" class="form-control aqfield" rows="2"></textarea>
+                        <div class="container text-center mt-3" id="aqAddbutton">
+                            <button onclick="addnew_aqfield()" class="btn btn-primary btn-sm">ADD</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container text-center mt-3">
+                <button onclick="generate()" class="btn btn-primary btn-lg">Generate Resume</button>       
+            </div>    
+        </div>
+        </div>
+        </div>
+
+        <div class="container" id="Resume-template">
+            <div class="row">
+                
+                <div class="col-md-4 text-center py-5 background">
+                    <img src="https://i.stack.imgur.com/l60Hf.png",alt="" class="img-fluid img" id="image" />
+                    <div class="container">
+                        <p id="name_left">NAME</p>
+                        <p id="contact">CONTACT_NO</p>
+                        <p id="email">EMAIL</p>
+                        <p id="add">ADDRESS</p>
+                        <hr>
+                        <p ><a id="fb" href="#1">https://www.facebook.com/example</a></p>
+                        <p ><a id="insta" href="#1">INSTA LINK</a></p> 
+                        <p ><a id="linkedin" href="#1">LINKDIN LINK</a></p>                         
+                    </div>
+                </div>
+
+                <div class="col-md-8 py-3" >
+
+                    <h1 id="name_right" class="text-center" style="font-weight: 950">Name</h1>
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Objective</h3>
+                        </div>
+                        <div class="card-body">
+                            <p id="obj">Something</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Work Experience</h3>
+                        </div>
+                        <div class="card-body">
+                            <vl id="we">
+                                <li>WORK_EXPERIENCE-1</li>
+                                <li>WORK_EXPERIENCE-2</li>
+                            </vl>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Academic Qualification</h3>
+                        </div>
+                        <div class="card-body">
+                            <vl id="acdemic_Q">
+                                <li>ACADEMIC_QUALIFICATION-1</li>
+                                <li>ACADEMIC_QUALIFICATION-1</li>
+                            </vl>
+                        </div>
+                    </div>
+
+                    <div class="container mt-3 text-center">
+                        <button onclick="window.print()" class="btn background">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+        <script src="script.js"></script>
+    </body>
+ </html>
