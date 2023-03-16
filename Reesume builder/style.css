@@ -1,1 +1,30 @@
 
+#Resume-template
+{
+    display:none;
+}
+.img
+{
+    border-radius: 50%;
+    width: 190px;
+}
+
+.background
+{
+    background-color:darkblue;
+    color: white;
+}
+
+.p_i
+{
+    text-align: left;
+    margin-left: 10%;
+}
+.sk
+{
+text-align: left;
+}
+.lng
+{
+text-align: left;
+}
