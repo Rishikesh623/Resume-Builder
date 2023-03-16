@@ -1,29 +1,60 @@
 function addnew_wfield() 
 {
-    let newNode = document.createElement("textarea");
-    newNode.classList.add("form-control");
-    newNode.classList.add("wfield");
-    newNode.setAttribute("placeholder","Enter here")
+    let newBox = document.createElement("textarea");
+    newBox.classList.add("form-control");
+    newBox.classList.add("wfield");
+    newBox.setAttribute("placeholder","Enter here")
 
     let w0b = document.getElementById("wexp");
     let wAddbutton0b = document.getElementById("wAddbutton");
 
-    w0b.insertBefore(newNode, wAddbutton0b);
+    w0b.insertBefore(newBox, wAddbutton0b);
 
 }
 
 
 function addnew_aqfield() 
 {
-    let newNode = document.createElement("textarea");
-    newNode.classList.add("form-control");
-    newNode.classList.add("aqfield");
-    newNode.setAttribute("placeholder","Enter here")
+    let newBox = document.createElement("textarea");
+    newBox.classList.add("form-control");
+    newBox.classList.add("aqfield");
+    newBox.setAttribute("placeholder","Enter here")
 
     let aq0b = document.getElementById("aq");
     let aqAddbutton0b = document.getElementById("aqAddbutton");
 
-    aq0b.insertBefore(newNode, aqAddbutton0b);
+    aq0b.insertBefore(newBox, aqAddbutton0b);
+
+}
+
+
+function addnew_skillfield() 
+{
+    let newBox = document.createElement("textarea");
+    newBox.classList.add("form-control");
+    newBox.classList.add("skillfield");
+    newBox.setAttribute("placeholder","Enter here");
+    newBox.setAttribute("rows","1");
+
+    let skill0b = document.getElementById("skill");
+    let skillAddbutton0b = document.getElementById("skillAddbutton");
+
+    skill0b.insertBefore(newBox, skillAddbutton0b);
+
+}
+
+function addnew_lngfield() 
+{
+    let newBox = document.createElement("textarea");
+    newBox.classList.add("form-control");
+    newBox.classList.add("lngfield");
+    newBox.setAttribute("placeholder","Enter here")
+    newBox.setAttribute("rows","1");
+    
+    let lng0b = document.getElementById("lng");
+    let lngAddbutton0b = document.getElementById("lngAddbutton");
+
+    lng0b.insertBefore(newBox, lngAddbutton0b);
 
 }
 
@@ -43,6 +74,19 @@ function generate()
 
     document.getElementById("obj").innerHTML=document.getElementById("objfield").value;
     
+    const skillinputs=document.querySelectorAll('.skillfield');
+    const skillList=document.querySelector('.sk-list');
+    let skills='';
+    skillinputs.forEach(input=>{const skill=input.value.trim(); if (skill){skills +=`<li class="sk-item">${skill}</li>`}});
+    skillList.innerHTML=skills;
+
+    const lnginputs=document.querySelectorAll('.lngfield');
+    const lngList=document.querySelector('.lng-list');
+    let lngs='';
+    lnginputs.forEach(input=>{const lng=input.value.trim(); if (lng){lngs +=`<li class="lng-item">${lng}</li>`}});
+    lngList.innerHTML=lngs;
+    
+    
     let workexp=document.getElementsByClassName("wfield");
     let str='';
     for (let i of workexp)
@@ -58,6 +102,7 @@ function generate()
         str1=str1+`<li>${i.value}</li>`;
     }
     document.getElementById("acdemic_Q").innerHTML=str1;
+
 
     let file=document.getElementById("imgfield").files[0];
     console.log(file);
