@@ -1,3 +1,4 @@
+//add new text boxes for work experience
 function addnew_wfield() 
 {
     let newBox = document.createElement("textarea");
@@ -12,7 +13,7 @@ function addnew_wfield()
 
 }
 
-
+//add new text boxes for acdenmic qualifiaction
 function addnew_aqfield() 
 {
     let newBox = document.createElement("textarea");
@@ -27,7 +28,7 @@ function addnew_aqfield()
 
 }
 
-
+//add new text boxes for skill
 function addnew_skillfield() 
 {
     let newBox = document.createElement("textarea");
@@ -43,6 +44,7 @@ function addnew_skillfield()
 
 }
 
+//add new text boxes for languages
 function addnew_lngfield() 
 {
     let newBox = document.createElement("textarea");
