@@ -95,6 +95,22 @@
                         </div>
                     </div>
 
+                    <div class="form-group " id="skill" >
+                        <label for="">Skills(PROFESSIONAL) </label>
+                        <textarea  placeholder="Enter here" class="form-control skillfield" rows="1"></textarea>
+                        <div class="container text-center mt-3" id="skillAddbutton">
+                            <button onclick="addnew_skillfield()" class="btn btn-primary btn-sm">ADD</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group " id="lng" >
+                        <label for="">Languages </label>
+                        <textarea  placeholder="Enter here" class="form-control lngfield" rows="1"></textarea>
+                        <div class="container text-center mt-3" id="lngAddbutton">
+                            <button onclick="addnew_lngfield()" class="btn btn-primary btn-sm">ADD</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="container text-center mt-3">
@@ -110,20 +126,40 @@
                 <div class="col-md-4 text-center py-5 background">
                     <img src="https://i.stack.imgur.com/l60Hf.png",alt="" class="img-fluid img" id="image" />
                     <div class="container">
-                        <p id="name_left">NAME</p>
-                        <p id="contact">CONTACT_NO</p>
-                        <p id="email">EMAIL</p>
-                        <p id="add">ADDRESS</p>
+                        <h4>Personal Details</h4>
                         <hr>
-                        <p ><a id="fb" href="#1">https://www.facebook.com/example</a></p>
-                        <p ><a id="insta" href="#1">INSTA LINK</a></p> 
-                        <p ><a id="linkedin" href="#1">LINKDIN LINK</a></p>                         
+                        <div class="p_i">
+                            <p id="name_left">Name</p>
+                            <p id="contact">CONTACT_NO</p>
+                            <p id="email">EMAIL</p>
+                            <p id="add">ADDRESS</p>
+                            <p ><a id="fb" href="#1">https://www.facebook.com/example</a></p>
+                            <p ><a id="insta" href="#1">INSTA LINK</a></p> 
+                            <p ><a id="linkedin" href="#1">LINKDIN LINK</a></p>
+                        </div>
+                        
+                        <h4>Skills</h4>
+                        <hr>
+                        <div class="sk">
+                        <ul class="sk-list" style="list-style-type: none;" >
+                            <li class="sk-item">skills</li>
+                        </ul>
+                        </div>
+
+                        <h4>Languages</h4>
+                        <hr>
+                        <div class="lng">
+                        <ul class="lng-list" style="list-style-type: none;" >
+                            <li class="lng-item">languages</li>
+                        </ul>
+                        </div>
+                         
                     </div>
                 </div>
 
                 <div class="col-md-8 py-3" >
 
-                    <h1 id="name_right" class="text-center" style="font-weight: 950">Name</h1>
+                    <h1 id="name_right" class="text-left" style="font-weight: 950">Name</h1>
 
                     <div class="card mt-4">
                         <div class="card-header background">
@@ -139,10 +175,10 @@
                             <h3>Work Experience</h3>
                         </div>
                         <div class="card-body">
-                            <vl id="we">
+                            <ul id="we">
                                 <li>WORK_EXPERIENCE-1</li>
                                 <li>WORK_EXPERIENCE-2</li>
-                            </vl>
+                            </ul>
                         </div>
                     </div>
 
@@ -151,10 +187,10 @@
                             <h3>Academic Qualification</h3>
                         </div>
                         <div class="card-body">
-                            <vl id="acdemic_Q">
+                            <ul id="acdemic_Q">
                                 <li>ACADEMIC_QUALIFICATION-1</li>
                                 <li>ACADEMIC_QUALIFICATION-1</li>
-                            </vl>
+                            </ul>
                         </div>
                     </div>
 
